@@ -11,13 +11,15 @@
   },
   {
     "id": "p2",
-    "name": "Pack Fiançailles Rose Gold",
+    "name": "Pack Promo 💍en Doré/Argenté",
     "category": "pack_fiancailles",
-    "description": "Ensemble complet avec plateau bordure dorée et prénom gravé.",
-    "price": 500,
+    "description": "Ensemble complet avec plateau 2verres,2 porte bagues, bol",
+    "price": 400,
     "icon": "💍",
-    "image": "",
-    "images": []
+    "image": "1781466476451-52aaed85d3ab7b3a7ac0a5f1cced492b.jpg",
+    "images": [
+      "1781461734737-128695492d6b4afc88ca9e66115aaa41.jpg"
+    ]
   },
   {
     "id": "p4",
@@ -40,60 +42,26 @@
     "id": "p5",
     "name": "Sujet Dragée Personnalisé",
     "category": "accessoires",
-    "description": "Sujets résine personnalisés avec prénoms et date pour vos dragées.",
-    "price": 80,
+    "description": "Sujets résine personnalisés avec prénoms et date avec chocolat dragées.",
+    "price": 23,
     "icon": "✨",
-    "image": "",
-    "images": []
+    "image": "1781466057136-WhatsApp-Image-2026-06-14-at-20.09.24-2.jpeg",
+    "images": [
+      "1781465952095-WhatsApp-Image-2026-06-14-at-20.16.36.jpeg",
+      "1781465983713-WhatsApp-Image-2026-06-14-at-20.09.23.jpeg",
+      "1781466007057-WhatsApp-Image-2026-06-14-at-20.09.23-1.jpeg",
+      "1781466030638-WhatsApp-Image-2026-06-14-at-20.09.23-3.jpeg",
+      "1781466050307-WhatsApp-Image-2026-06-14-at-20.16.38-10.jpeg"
+    ]
   },
   {
     "id": "p6",
     "name": "Porte-clés Résine",
     "category": "accessoires",
-    "description": "Porte-clés personnalisés en résine avec fleurs séchées.",
-    "price": 60,
+    "description": "Porte-clés personnalisés en résine 5CM",
+    "price": 25,
     "icon": "🔑",
-    "image": "",
-    "images": []
-  },
-  {
-    "id": "p7",
-    "name": "Tableau Mural Abstrait",
-    "category": "deco_murale",
-    "description": "Œuvre murale en résine époxy, couleurs naturelles et dorures.",
-    "price": 700,
-    "icon": "🖼️",
-    "image": "",
-    "images": []
-  },
-  {
-    "id": "p8",
-    "name": "Panneau Floral",
-    "category": "deco_murale",
-    "description": "Décoration murale avec fleurs séchées incrustées dans la résine.",
-    "price": 550,
-    "icon": "🌿",
-    "image": "",
-    "images": []
-  },
-  {
-    "id": "p9",
-    "name": "Plateau de Table Or",
-    "category": "art_table",
-    "description": "Plateau résine blanc avec contours or, personnalisable.",
-    "price": 280,
-    "icon": "🕯️",
-    "image": "",
-    "images": []
-  },
-  {
-    "id": "p10",
-    "name": "Bougeoir Résine Marbré",
-    "category": "art_table",
-    "description": "Bougeoir effet marbre en résine, tons beige et or.",
-    "price": 120,
-    "icon": "🕯️",
-    "image": "",
+    "image": "1781462123814-portecl1.jpeg",
     "images": []
   },
   {
@@ -419,6 +387,33 @@
     "images": [
       "1781453220636-porte-cl.jpeg",
       "1781453483943-portecl1.jpeg"
+    ]
+  },
+  {
+    "id": "p1781466213741v7ks",
+    "name": "Sujet Avec Support",
+    "category": "accessoires",
+    "description": "",
+    "price": 35,
+    "icon": "✨",
+    "image": "1781466407617-WhatsApp-Image-2026-06-14-at-20.42.56.jpeg",
+    "images": [
+      "1781466213732-cadreboi.jpeg",
+      "1781466355344-WhatsApp-Image-2026-06-14-at-20.43.02.jpeg",
+      "1781466363743-WhatsApp-Image-2026-06-14-at-20.43.01.jpeg",
+      "1781466394055-WhatsApp-Image-2026-06-14-at-20.42.56.jpeg"
+    ]
+  },
+  {
+    "id": "p1781466448187wl4w",
+    "name": "Bookmark",
+    "category": "accessoires",
+    "description": "",
+    "price": 25,
+    "icon": "✨",
+    "image": "1781466448179-WhatsApp-Image-2026-06-14-at-20.42.54.jpeg",
+    "images": [
+      "1781466448179-WhatsApp-Image-2026-06-14-at-20.42.54.jpeg"
     ]
   }
 ]
