@@ -3,10 +3,10 @@
     "id": "p1",
     "name": "Pack Fiançailles Blanc & Or",
     "category": "pack_fiancailles",
-    "description": "Plateau personnalisé, verres gravés et bougeoirs en résine blanche et or.",
-    "price": 450,
+    "description": "Plateau personnalisé 33CM, 2 verres  et Mini trophée 13CM , 2 portes Bagues , BOL",
+    "price": 660,
     "icon": "💍",
-    "image": "",
+    "image": "1781453749888-Pack-fianailles.jpg",
     "images": []
   },
   {
@@ -129,21 +129,24 @@
     "description": "",
     "price": 450,
     "icon": "✨",
-    "image": "1781446107422-hexagonept.jpg",
-    "images": [
-      "1781446107422-hexagonept.jpg"
-    ]
+    "image": "1781452035789-WhatsApp-Image-2026-06-14-at-16.42.21.jpeg",
+    "images": []
   },
   {
     "id": "p17814462454057pez",
     "name": "Hexagone Moyen",
-    "category": "pack_fiancailles",
+    "category": "conservation_fleurs",
     "description": "",
     "price": 650,
     "icon": "✨",
-    "image": "1781446245394-hexagone11.jpeg",
+    "image": "1781452172976-hexagone11.jpeg",
     "images": [
-      "1781446245394-hexagone11.jpeg"
+      "1781446245394-hexagone11.jpeg",
+      "1781452080248-hexagonemy6.jpeg",
+      "1781452138889-hexagone8.jpeg",
+      "1781452148041-hexagone7.jpeg",
+      "1781452159552-hexagone9.jpeg",
+      "1781452171147-hexagone12.jpeg"
     ]
   },
   {
@@ -156,6 +159,266 @@
     "image": "1781446298450-hexagonegr2.jpeg",
     "images": [
       "1781446298450-hexagonegr2.jpeg"
+    ]
+  },
+  {
+    "id": "p17814492026007duo",
+    "name": "Mini Arch",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 200,
+    "icon": "✨",
+    "image": "1781449382046-cadrearc2.jpeg",
+    "images": [
+      "1781449202593-Large-Arch-Bookend-Epoxy-Resin-Silicone-Mould-9.webp"
+    ]
+  },
+  {
+    "id": "p1781449306000qoje",
+    "name": "Moyen Arch",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 450,
+    "icon": "✨",
+    "image": "1781449371078-cadrearc2.jpeg",
+    "images": [
+      "1781449305974-dbandrea-floral-block-7-x-4-3-arch-1211715637.webp"
+    ]
+  },
+  {
+    "id": "p1781449353837ruf8",
+    "name": "Grand Arch",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 600,
+    "icon": "✨",
+    "image": "1781449353829-cadrearc2.jpeg",
+    "images": [
+      "1781449353829-cadrearc2.jpeg"
+    ]
+  },
+  {
+    "id": "p1781449490686oxci",
+    "name": "Rectangle Moyen",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 580,
+    "icon": "✨",
+    "image": "1781449490678-cadrerectanglept2.jpeg",
+    "images": [
+      "1781449490678-cadrerectanglept2.jpeg"
+    ]
+  },
+  {
+    "id": "p1781449542329y2d6",
+    "name": "Rectangle Grand",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 1000,
+    "icon": "✨",
+    "image": "1781449542326-cadrerectanglegr2.jpeg",
+    "images": [
+      "1781449542326-cadrerectanglegr2.jpeg"
+    ]
+  },
+  {
+    "id": "p1781449583760yw4j",
+    "name": "Carré",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 550,
+    "icon": "✨",
+    "image": "1781449583753-cadrecarr1.jpeg",
+    "images": [
+      "1781449583753-cadrecarr1.jpeg"
+    ]
+  },
+  {
+    "id": "p1781449851616l5gt",
+    "name": "Pyramide",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 500,
+    "icon": "✨",
+    "image": "1781449851614-images-1.jpg",
+    "images": [
+      "1781449851614-images-1.jpg"
+    ]
+  },
+  {
+    "id": "p1781449944411s6dx",
+    "name": "Rond",
+    "category": "conservation_fleurs",
+    "description": "Dimension 20cm Profond 5cm",
+    "price": 650,
+    "icon": "✨",
+    "image": "1781450011437-cadrerond1.jpeg",
+    "images": []
+  },
+  {
+    "id": "p1781450194556x9f9",
+    "name": "Alphabet",
+    "category": "conservation_fleurs",
+    "description": "Dimension 15*3CM",
+    "price": 350,
+    "icon": "✨",
+    "image": "1781450220385-WhatsApp-Image-2026-06-14-at-16.14.45-2.jpeg",
+    "images": [
+      "1781450194549-WhatsApp-Image-2026-06-14-at-16.14.45-2.jpeg",
+      "1781450209851-WhatsApp-Image-2026-06-14-at-16.14.45.jpeg",
+      "1781450218622-WhatsApp-Image-2026-06-14-at-16.14.45-1.jpeg"
+    ]
+  },
+  {
+    "id": "p1781450291498lk12",
+    "name": "Mini Trophé",
+    "category": "conservation_fleurs",
+    "description": "13cm",
+    "price": 100,
+    "icon": "✨",
+    "image": "1781450291495-trophept2.jpeg",
+    "images": [
+      "1781450291495-trophept2.jpeg"
+    ]
+  },
+  {
+    "id": "p1781450358668dvf9",
+    "name": "Trophé Moyen",
+    "category": "conservation_fleurs",
+    "description": "26CM AVEC SUPPORT",
+    "price": 300,
+    "icon": "✨",
+    "image": "1781453451824-trophemy3.jpeg",
+    "images": [
+      "1781450358648-trophemy3.jpeg",
+      "1781453334997-trophemy4.jpeg",
+      "1781453348126-WhatsApp-Image-2026-06-14-at-16.33.18.jpeg",
+      "1781453446216-WhatsApp-Image-2026-06-14-at-17.10.24.jpeg"
+    ]
+  },
+  {
+    "id": "p178145042997841cd",
+    "name": "Trophé Grand",
+    "category": "conservation_fleurs",
+    "description": "33cm AVEC SUPPORT",
+    "price": 500,
+    "icon": "✨",
+    "image": "1781450429970-trophegr.jpeg",
+    "images": [
+      "1781450429970-trophegr.jpeg"
+    ]
+  },
+  {
+    "id": "p1781450766749o1sw",
+    "name": "CUBE",
+    "category": "conservation_fleurs",
+    "description": "8*8CM",
+    "price": 250,
+    "icon": "✨",
+    "image": "1781450766743-WhatsApp-Image-2026-06-14-at-16.21.38-2.jpeg",
+    "images": [
+      "1781450766743-WhatsApp-Image-2026-06-14-at-16.21.38-2.jpeg"
+    ]
+  },
+  {
+    "id": "p1781450807685l5sk",
+    "name": "Papillon",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 450,
+    "icon": "✨",
+    "image": "1781450807682-WhatsApp-Image-2026-06-14-at-16.22.30.jpeg",
+    "images": [
+      "1781450807682-WhatsApp-Image-2026-06-14-at-16.22.30.jpeg"
+    ]
+  },
+  {
+    "id": "p1781451136341bxol",
+    "name": "Porte Bague",
+    "category": "conservation_fleurs",
+    "description": "11CM",
+    "price": 90,
+    "icon": "✨",
+    "image": "1781451136338-WhatsApp-Image-2026-06-14-at-16.21.38-1.jpeg",
+    "images": [
+      "1781451136338-WhatsApp-Image-2026-06-14-at-16.21.38-1.jpeg"
+    ]
+  },
+  {
+    "id": "p1781451482058vxfx",
+    "name": "Vide Poche",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 100,
+    "icon": "✨",
+    "image": "1781451482054-WhatsApp-Image-2026-06-14-at-16.33.29-1.jpeg",
+    "images": [
+      "1781451482054-WhatsApp-Image-2026-06-14-at-16.33.29-1.jpeg"
+    ]
+  },
+  {
+    "id": "p1781451682554q6ae",
+    "name": "Cadre en Bois",
+    "category": "conservation_fleurs",
+    "description": "Carré :27*27cm\r\nRectangle :23*28cm",
+    "price": 400,
+    "icon": "✨",
+    "image": "1781451768691-cadrebois1.jpeg",
+    "images": [
+      "1781451682552-cadrebois1.jpeg",
+      "1781451704664-cadreboisc.jpeg",
+      "1781451721459-cadreboisd.jpeg",
+      "1781451766130-cadre-bois-a.jpeg"
+    ]
+  },
+  {
+    "id": "p1781452720754hpq4",
+    "name": "Plateau Ovale",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 400,
+    "icon": "✨",
+    "image": "1781453536645-WhatsApp-Image-2026-06-14-at-16.33.18-1.jpeg",
+    "images": [
+      "1781452720729-WhatsApp-Image-2026-06-14-at-16.33.18-1.jpeg",
+      "1781453275814-WhatsApp-Image-2026-06-14-at-17.07.30.jpeg"
+    ]
+  },
+  {
+    "id": "p1781452910813ktgc",
+    "name": "Plateau Rectangle",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 450,
+    "icon": "✨",
+    "image": "1781452910811-WhatsApp-Image-2026-06-14-at-16.33.22.jpeg",
+    "images": [
+      "1781452910811-WhatsApp-Image-2026-06-14-at-16.33.22.jpeg"
+    ]
+  },
+  {
+    "id": "p1781453128200j53a",
+    "name": "Plateau Rond",
+    "category": "conservation_fleurs",
+    "description": "33cm",
+    "price": 500,
+    "icon": "✨",
+    "image": "1781453128198-WhatsApp-Image-2026-06-14-at-17.03.38.jpeg",
+    "images": [
+      "1781453128198-WhatsApp-Image-2026-06-14-at-17.03.38.jpeg"
+    ]
+  },
+  {
+    "id": "p1781453220638pw5s",
+    "name": "Porte Clé",
+    "category": "accessoires",
+    "description": "",
+    "price": 25,
+    "icon": "✨",
+    "image": "1781453518074-portecl1.jpeg",
+    "images": [
+      "1781453220636-porte-cl.jpeg",
+      "1781453483943-portecl1.jpeg"
     ]
   }
 ]
