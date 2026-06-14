@@ -753,6 +753,25 @@ section { padding: 5rem 2rem; }
   /* Contact */
   .contact-body { padding: 2rem 1.25rem; }
 
-  /* Order bar */
-  .order-bar { left: 1rem; right: 1rem; bottom: 1rem; border-radius: var(--radius-lg); flex-direction: column; gap: 0.5rem; text-align: center; }
+  /* Order bar → FAB circulaire */
+  .order-bar {
+    left: auto !important; right: 1.25rem; bottom: 1.25rem;
+    width: 68px; height: 68px; border-radius: 50%;
+    padding: 0; gap: 0; flex-direction: column;
+    justify-content: center; align-items: center;
+    transform: translateX(0) translateY(120px);
+    box-shadow: 0 6px 24px rgba(44,24,16,0.45);
+    cursor: pointer;
+  }
+  .order-bar.visible { transform: translateX(0) translateY(0); }
+  .order-bar-text, .order-bar-btn { display: none !important; }
+  .order-bar-icon { font-size: 1.6rem; line-height: 1; }
+  .order-bar-count {
+    background: var(--color-gold); color: white;
+    width: 24px; height: 24px; border-radius: 50%;
+    font-size: 0.78rem; font-weight: 700;
+    position: absolute; top: 4px; right: 4px;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid var(--color-dark);
+  }
 }

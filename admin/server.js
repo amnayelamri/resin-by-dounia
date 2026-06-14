@@ -2,6 +2,7 @@ const express = require('express');
 const multer  = require('multer');
 const path    = require('path');
 const fs      = require('fs');
+const { exec } = require('child_process');
 
 const app  = express();
 const PORT = 3001;
@@ -172,6 +173,24 @@ app.delete('/api/images/:filename', (req, res) => {
   const file = path.join(IMAGES_DIR, req.params.filename);
   if (fs.existsSync(file)) fs.unlinkSync(file);
   res.json({ ok: true });
+});
+
+/* =================== GIT PUSH API =================== */
+
+const REPO_DIR = path.join(__dirname, '..');
+
+app.post('/api/git/push', (req, res) => {
+  const message = (req.body && req.body.message) || 'Mise à jour produits et images';
+  const safeMsg = message.replace(/"/g, "'");
+  const cmd = `git add -A && git commit -m "${safeMsg}" && git push`;
+  exec(cmd, { cwd: REPO_DIR, shell: true }, (err, stdout, stderr) => {
+    const output = (stdout + stderr).trim();
+    const nothingToCommit = output.includes('nothing to commit') || output.includes('nothing added');
+    if (err && !nothingToCommit) {
+      return res.status(500).json({ ok: false, error: stderr || err.message });
+    }
+    res.json({ ok: true, output: nothingToCommit ? 'Rien à commiter — site déjà à jour.' : output });
+  });
 });
 
 /* ---- Start ---- */

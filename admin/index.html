@@ -181,6 +181,9 @@
       <h1 id="topbar-title">Gestion des Produits</h1>
       <div class="topbar-actions">
         <button class="btn btn-primary" id="topbar-add-btn" onclick="openAddProduct()">+ Ajouter un produit</button>
+        <button class="btn btn-gold" onclick="openGitModal()" style="display:flex;align-items:center;gap:0.4rem">
+          ↑ Publier sur GitHub
+        </button>
       </div>
     </div>
 
@@ -374,6 +377,25 @@
 
 <!-- Toast -->
 <div class="toast" id="toast"></div>
+
+<!-- Git Push Modal -->
+<div class="modal-bg" id="git-modal">
+  <div class="modal-box" style="max-width:480px">
+    <div class="modal-title">Publier sur GitHub</div>
+    <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:1.25rem">
+      Cela va sauvegarder toutes vos modifications (produits, photos, formations) et les envoyer sur GitHub Pages.
+    </p>
+    <div class="form-group" style="margin-bottom:1.5rem">
+      <label>Message de mise à jour</label>
+      <input type="text" id="git-message" value="Mise à jour produits et images" placeholder="Décrivez vos changements...">
+    </div>
+    <div id="git-output" style="display:none;background:#1e1e1e;color:#d4d4d4;border-radius:6px;padding:0.75rem 1rem;font-family:monospace;font-size:0.78rem;white-space:pre-wrap;max-height:140px;overflow-y:auto;margin-bottom:1rem"></div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline" onclick="closeGitModal()">Annuler</button>
+      <button type="button" class="btn btn-gold" id="git-push-btn" onclick="pushToGitHub()">↑ Publier</button>
+    </div>
+  </div>
+</div>
 
 <script>
 /* ===== State ===== */
@@ -772,6 +794,62 @@ async function removeCatImage(key) {
   await loadCategories();
   toast('Image supprimée', '');
 }
+
+/* ===== Git Push ===== */
+function openGitModal() {
+  document.getElementById('git-output').style.display = 'none';
+  document.getElementById('git-output').textContent = '';
+  document.getElementById('git-push-btn').disabled = false;
+  document.getElementById('git-push-btn').textContent = '↑ Publier';
+  document.getElementById('git-modal').classList.add('open');
+}
+
+function closeGitModal() {
+  document.getElementById('git-modal').classList.remove('open');
+}
+
+async function pushToGitHub() {
+  const message = document.getElementById('git-message').value.trim() || 'Mise à jour produits et images';
+  const btn = document.getElementById('git-push-btn');
+  const output = document.getElementById('git-output');
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Publication en cours…';
+  output.style.display = 'none';
+
+  try {
+    const res = await fetch('/api/git/push', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message })
+    });
+    const data = await res.json();
+
+    output.style.display = 'block';
+    if (data.ok) {
+      output.style.color = '#4caf50';
+      output.textContent = data.output || 'Publié avec succès ✓';
+      btn.textContent = '✓ Publié';
+      toast('Site mis à jour sur GitHub ✓', 'success');
+    } else {
+      output.style.color = '#f44336';
+      output.textContent = data.error || 'Erreur inconnue';
+      btn.disabled = false;
+      btn.textContent = '↑ Réessayer';
+      toast('Erreur lors de la publication', 'error');
+    }
+  } catch (e) {
+    output.style.display = 'block';
+    output.style.color = '#f44336';
+    output.textContent = 'Impossible de contacter le serveur : ' + e.message;
+    btn.disabled = false;
+    btn.textContent = '↑ Réessayer';
+  }
+}
+
+document.getElementById('git-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('git-modal')) closeGitModal();
+});
 
 /* ===== Init ===== */
 loadProducts();

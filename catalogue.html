@@ -56,10 +56,11 @@
   </div>
 
   <!-- Floating Order Bar -->
-  <div class="order-bar" id="order-bar">
+  <div class="order-bar" id="order-bar" onclick="openOrderModal()">
+    <span class="order-bar-icon">🛍️</span>
     <div class="order-bar-count" id="order-count">0</div>
     <span class="order-bar-text" data-i18n="catalogue.order_btn">Commander</span>
-    <button class="order-bar-btn" onclick="openOrderModal()" data-i18n="catalogue.order_btn">Commander</button>
+    <button class="order-bar-btn" data-i18n="catalogue.order_btn">Commander</button>
   </div>
 
   <!-- Order Modal -->
