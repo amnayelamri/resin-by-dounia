@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Resin by Dounia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">RD</div>
+      <span class="logo-text">Resin by Dounia</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a>
+      <a href="formation.html" data-i18n="nav.formation">Formations</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-lang-fr" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" id="btn-lang-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-lang-ar" onclick="setLang('ar')">عربي</button>
+        <button class="lang-btn" id="btn-lang-darija" onclick="setLang('darija')">دارجة</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" onclick="closeMenu()">✕</button>
+    <a href="index.html" onclick="closeMenu()" data-i18n="nav.home">Accueil</a>
+    <a href="catalogue.html" onclick="closeMenu()" data-i18n="nav.catalogue">Catalogue</a>
+    <a href="formation.html" onclick="closeMenu()" data-i18n="nav.formation">Formations</a>
+    <a href="contact.html" onclick="closeMenu()" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <div class="contact-hero">
+    <h1 data-i18n="contact.title">Nous contacter</h1>
+    <p data-i18n="contact.subtitle">Retrouvez-nous sur nos réseaux</p>
+  </div>
+
+  <!-- Body -->
+  <div class="contact-body">
+
+    <!-- Social links -->
+    <div class="social-grid">
+      <a class="social-card" href="https://www.instagram.com/resinbydounia/" target="_blank">
+        <span class="social-icon">📸</span>
+        <span data-i18n="contact.instagram">Instagram</span>
+        <small style="color:var(--color-text-light);font-size:0.78rem;">@resinbydounia</small>
+      </a>
+      <a class="social-card" href="#" target="_blank" id="tiktok-link">
+        <span class="social-icon">🎵</span>
+        <span data-i18n="contact.tiktok">TikTok</span>
+        <small style="color:var(--color-text-light);font-size:0.78rem;">@resinbydounia</small>
+      </a>
+      <a class="social-card" href="#" target="_blank" id="whatsapp-link">
+        <span class="social-icon">💬</span>
+        <span data-i18n="contact.whatsapp">WhatsApp</span>
+        <small style="color:var(--color-text-light);font-size:0.78rem;">Envoyer un message</small>
+      </a>
+    </div>
+
+    <!-- DM Banner -->
+    <div class="dm-banner">
+      <h2 data-i18n="contact.dm_title">Envoyer un message</h2>
+      <p data-i18n="contact.dm_text">Cliquez ci-dessous pour nous contacter directement en message privé sur Instagram.</p>
+      <a href="https://ig.me/m/resinbydounia" target="_blank" class="btn-gold" data-i18n="contact.dm_btn">Envoyer un DM</a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <div class="logo-mark small">RD</div>
+      <span>Resin by Dounia</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/resinbydounia/" target="_blank" data-i18n="contact.instagram">Instagram</a>
+      <a href="#" target="_blank" id="footer-tiktok" data-i18n="contact.tiktok">TikTok</a>
+      <a href="#" target="_blank" id="footer-whatsapp" data-i18n="contact.whatsapp">WhatsApp</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer.rights">© 2026 Resin by Dounia — Casablanca, Maroc</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

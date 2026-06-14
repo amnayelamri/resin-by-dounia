@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resin by Dounia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">RD</div>
+      <span class="logo-text">Resin by Dounia</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a>
+      <a href="formation.html" data-i18n="nav.formation">Formations</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-lang-fr" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" id="btn-lang-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-lang-ar" onclick="setLang('ar')">عربي</button>
+        <button class="lang-btn" id="btn-lang-darija" onclick="setLang('darija')">دارجة</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" onclick="closeMenu()">✕</button>
+    <a href="index.html" onclick="closeMenu()" data-i18n="nav.home">Accueil</a>
+    <a href="catalogue.html" onclick="closeMenu()" data-i18n="nav.catalogue">Catalogue</a>
+    <a href="formation.html" onclick="closeMenu()" data-i18n="nav.formation">Formations</a>
+    <a href="contact.html" onclick="closeMenu()" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-deco"></div>
+    <div class="hero-deco2"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle" data-i18n="home.subtitle">Art de la résine — Casablanca, Maroc</p>
+      <h1 class="hero-title">Resin<br>by Dounia</h1>
+      <p class="hero-tagline" data-i18n="home.tagline">Des créations uniques faites à la main, avec amour.</p>
+      <a href="catalogue.html" class="btn-primary" data-i18n="home.cta">Découvrir la collection</a>
+    </div>
+  </section>
+
+  <!-- Categories Preview -->
+  <section class="categories-preview">
+    <h2 class="section-title" data-i18n="home.categories.title">Nos créations</h2>
+    <div class="categories-grid" id="categories-preview-grid"></div>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <div class="about-content">
+      <div class="about-logo">
+        <div class="logo-mark large">RD</div>
+      </div>
+      <div class="about-text">
+        <h2 data-i18n="home.about.title">L'art de la résine</h2>
+        <p data-i18n="home.about.text">Chaque pièce est créée à la main avec passion. Des décors personnalisés pour vos moments les plus précieux — fiançailles, mariages, cadeaux uniques.</p>
+        <a href="https://ig.me/m/resinbydounia" class="btn-secondary" target="_blank" data-i18n="home.about.cta">Commander sur Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <div class="logo-mark small">RD</div>
+      <span>Resin by Dounia</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/resinbydounia/" target="_blank" data-i18n="contact.instagram">Instagram</a>
+      <a href="#" target="_blank" id="footer-tiktok" data-i18n="contact.tiktok">TikTok</a>
+      <a href="#" target="_blank" id="footer-whatsapp" data-i18n="contact.whatsapp">WhatsApp</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer.rights">© 2026 Resin by Dounia — Casablanca, Maroc</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

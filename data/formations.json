@@ -1,0 +1,106 @@
+[
+  {
+    "id": "f1",
+    "title": "Introduction à la Résine Époxy",
+    "description": "Découvrez les bases : matériaux, sécurité et premiers pas.",
+    "tags": ["débutant", "bases", "sécurité"],
+    "lang": "fr",
+    "slides": [
+      {
+        "id": "s1",
+        "title": "Qu'est-ce que la résine époxy ?",
+        "type": "markdown",
+        "content": "# La Résine Époxy\n\nLa résine époxy est un **polymère thermodurcissable** composé de deux parties :\n\n- **La résine** (composant A)\n- **Le durcisseur** (composant B)\n\nLorsqu'on les mélange, une réaction chimique crée une matière dure, transparente et résistante.\n\n> ✨ C'est ce matériau magique qui permet de créer des bijoux, des plateaux, des tableaux et bien plus encore !\n\n## Propriétés\n\n- Transparence cristalline\n- Résistance aux UV (selon la qualité)\n- Surface lisse et brillante\n- Personnalisable à l'infini"
+      },
+      {
+        "id": "s2",
+        "title": "Les équipements nécessaires",
+        "type": "steps",
+        "stepsTitle": "Ce dont vous avez besoin",
+        "intro": "Avant de commencer, préparez votre espace de travail avec ces éléments essentiels :",
+        "steps": [
+          { "label": "Protection personnelle", "content": "Gants en nitrile, masque FFP2, lunettes de protection. La résine est chimique, ne jamais travailler sans protection." },
+          { "label": "Résine et durcisseur", "content": "Choisissez une résine époxy de qualité art/déco avec un ratio clair (ex: 2:1 ou 1:1). Vérifiez le temps de travail (pot life)." },
+          { "label": "Matériel de mélange", "content": "Gobelets gradués, bâtons de mélange (ou spatules silicone), balance précise au gramme." },
+          { "label": "Moules ou supports", "content": "Moules en silicone, plateaux protégés de film plastique, ou supports en bois sellés." },
+          { "label": "Pigments et inclusions", "content": "Pigments en poudre, mica, fleurs séchées, paillettes, feuilles d'or… votre créativité est la seule limite !" }
+        ]
+      },
+      {
+        "id": "s3",
+        "title": "Quiz : Sécurité en premier",
+        "type": "quiz",
+        "question": "Quels équipements sont INDISPENSABLES pour travailler avec la résine époxy ?",
+        "choices": [
+          { "id": "a", "text": "Gants en nitrile, masque et lunettes", "correct": true },
+          { "id": "b", "text": "Juste des gants fins en plastique", "correct": false },
+          { "id": "c", "text": "Aucune protection n'est nécessaire", "correct": false },
+          { "id": "d", "text": "Seulement un masque chirurgical", "correct": false }
+        ],
+        "explanation": "La résine époxy contient des composants chimiques irritants. Il faut TOUJOURS porter des gants en nitrile (pas en latex), un masque FFP2 minimum, et des lunettes de protection."
+      },
+      {
+        "id": "s4",
+        "title": "Vrai ou Faux : La résine",
+        "type": "truefalse",
+        "statement": "On peut utiliser n'importe quel ratio résine/durcisseur — il suffit d'en mettre suffisamment.",
+        "answer": false,
+        "explanation": "FAUX. Le ratio résine/durcisseur est critique et doit être respecté à la lettre. Un mauvais ratio empêche la polymérisation correcte et la résine ne durcira pas, ou restera poisseuse."
+      },
+      {
+        "id": "s5",
+        "title": "Vocabulaire clé",
+        "type": "flashcard",
+        "question": "Qu'est-ce que le « pot life » (temps de travail) d'une résine ?",
+        "answer": "Le **pot life** est le temps dont vous disposez après le mélange résine + durcisseur pour travailler la matière avant qu'elle ne commence à durcir. Il varie de 20 minutes à plusieurs heures selon la résine.",
+        "hint": "Pensez à une horloge qui tourne dès que vous mélangez."
+      }
+    ]
+  },
+  {
+    "id": "f2",
+    "title": "Créer un Plateau en Résine",
+    "description": "Tutoriel complet pour réaliser votre premier plateau personnalisé.",
+    "tags": ["intermédiaire", "plateau", "tutoriel"],
+    "lang": "fr",
+    "slides": [
+      {
+        "id": "s1",
+        "title": "Introduction",
+        "type": "markdown",
+        "content": "# Votre Premier Plateau en Résine\n\nDans cette formation, nous allons créer ensemble un **plateau décoratif** en résine époxy, parfait pour offrir ou décorer votre intérieur.\n\n## Ce que vous allez apprendre\n\n- Préparer et sceller un support en bois\n- Mélanger et colorer la résine\n- Créer des effets marbré et dorure\n- Démouler et finir proprement\n\n⏱️ **Durée estimée :** 2h de travail + 24-48h de séchage"
+      },
+      {
+        "id": "s2",
+        "title": "Relier les outils",
+        "type": "matching",
+        "instruction": "Reliez chaque outil à son utilisation dans la résine.",
+        "pairs": [
+          { "left": "Gobelets gradués", "right": "Mesurer les quantités" },
+          { "left": "Chalumeau / pistolet à air", "right": "Éliminer les bulles d'air" },
+          { "left": "Silicone démoulant", "right": "Faciliter le démoulage" },
+          { "left": "Pigment mica", "right": "Colorer la résine" }
+        ]
+      },
+      {
+        "id": "s3",
+        "title": "Q&A : Problèmes courants",
+        "type": "reveal",
+        "items": [
+          {
+            "question": "Ma résine est restée poisseuse après 48h — pourquoi ?",
+            "answer": "Cause probable : **mauvais ratio** ou **mélange insuffisant**. Il faut mélanger minimum 3-4 minutes en raclant bien les bords et le fond du gobelet. Un ratio incorrect empêche la réaction chimique de se compléter."
+          },
+          {
+            "question": "J'ai des bulles dans ma pièce finale — comment les éviter ?",
+            "answer": "Utilisez un **chalumeau ou pistolet à air chaud** juste après la coulée. Passez rapidement à 15-20 cm de la surface. Évitez de souffler avec la bouche (l'humidité crée des bulles). La résine légèrement chauffée aide aussi les bulles à remonter."
+          },
+          {
+            "question": "Puis-je ajouter de l'alcool dans la résine pour créer des effets ?",
+            "answer": "Oui ! L'**alcool isopropylique** (70% ou 90%) en petites quantités crée de superbes effets cellulaires. Quelques gouttes dans la résine colorée, ou vaporisé délicatement sur la surface."
+          }
+        ]
+      }
+    ]
+  }
+]

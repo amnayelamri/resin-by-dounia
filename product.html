@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produit — Resin by Dounia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">RD</div>
+      <span class="logo-text">Resin by Dounia</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a>
+      <a href="formation.html" data-i18n="nav.formation">Formations</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-lang-fr" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" id="btn-lang-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-lang-ar" onclick="setLang('ar')">عربي</button>
+        <button class="lang-btn" id="btn-lang-darija" onclick="setLang('darija')">دارجة</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" onclick="closeMenu()">✕</button>
+    <a href="index.html" onclick="closeMenu()" data-i18n="nav.home">Accueil</a>
+    <a href="catalogue.html" onclick="closeMenu()" data-i18n="nav.catalogue">Catalogue</a>
+    <a href="formation.html" onclick="closeMenu()" data-i18n="nav.formation">Formations</a>
+    <a href="contact.html" onclick="closeMenu()" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- Back -->
+  <button class="product-back" id="btn-back" onclick="goBack()">
+    ← <span data-i18n="product.back">Retour au catalogue</span>
+  </button>
+
+  <!-- Product layout -->
+  <div class="product-detail" id="product-detail" style="display:none">
+
+    <!-- Gallery -->
+    <div class="product-gallery">
+      <div class="gallery-main" id="gallery-main">
+        <div class="gallery-main-placeholder" id="gallery-placeholder">✨</div>
+      </div>
+      <div class="gallery-thumbs" id="gallery-thumbs"></div>
+    </div>
+
+    <!-- Info -->
+    <div class="product-info-panel">
+      <span class="product-category" id="detail-category"></span>
+      <h1 id="detail-name"></h1>
+      <div class="product-price" id="detail-price"></div>
+      <div class="product-divider"></div>
+      <p class="product-desc" id="detail-desc"></p>
+      <button class="btn-primary" onclick="openOrderModal()" data-i18n="product.order">Commander</button>
+    </div>
+  </div>
+
+  <!-- Order modal -->
+  <div class="modal-overlay" id="order-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeOrderModal()">✕</button>
+      <h3 data-i18n="order.title">Passer commande</h3>
+      <p data-i18n="order.instructions">Copiez ce message puis envoyez-le en DM sur Instagram.</p>
+      <p id="modal-message" class="modal-message"></p>
+      <div class="modal-actions">
+        <button class="btn-secondary" onclick="copyMessage()" data-i18n="order.copy">Copier le message</button>
+        <button class="btn-primary" onclick="openInstagram()" data-i18n="order.send_dm">Envoyer sur Instagram</button>
+      </div>
+      <p id="copy-feedback" class="copy-feedback" data-i18n="order.copied">Message copié !</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <div class="logo-mark small">RD</div>
+      <span>Resin by Dounia</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/resinbydounia/" target="_blank" data-i18n="contact.instagram">Instagram</a>
+      <a href="#" target="_blank" data-i18n="contact.tiktok">TikTok</a>
+      <a href="#" target="_blank" data-i18n="contact.whatsapp">WhatsApp</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer.rights">© 2026 Resin by Dounia — Casablanca, Maroc</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

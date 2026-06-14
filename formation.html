@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formations — Resin by Dounia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">RD</div>
+      <span class="logo-text">Resin by Dounia</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a>
+      <a href="formation.html" data-i18n="nav.formation">Formations</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-lang-fr" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" id="btn-lang-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-lang-ar" onclick="setLang('ar')">عربي</button>
+        <button class="lang-btn" id="btn-lang-darija" onclick="setLang('darija')">دارجة</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" onclick="closeMenu()">✕</button>
+    <a href="index.html" onclick="closeMenu()" data-i18n="nav.home">Accueil</a>
+    <a href="catalogue.html" onclick="closeMenu()" data-i18n="nav.catalogue">Catalogue</a>
+    <a href="formation.html" onclick="closeMenu()" data-i18n="nav.formation">Formations</a>
+    <a href="contact.html" onclick="closeMenu()" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- Formation Hero (shown when no formation is open) -->
+  <div id="formation-hero" class="formation-hero">
+    <h1 data-i18n="formation.title">Formations Résine</h1>
+    <p data-i18n="formation.subtitle">Apprenez l'art de la résine, à votre rythme</p>
+  </div>
+
+  <!-- Formation List -->
+  <div id="formation-list-section" class="formation-list-section">
+    <div id="formation-list"></div>
+  </div>
+
+  <!-- Slide Player (hidden by default) -->
+  <div id="slide-player" class="slide-player" style="display:none;">
+
+    <!-- Sidebar -->
+    <div class="slide-sidebar">
+      <div class="slide-sidebar-header">
+        <button class="sidebar-back" onclick="closeFormation()">
+          ← <span data-i18n="formation.back">Retour aux formations</span>
+        </button>
+        <div class="sidebar-title" id="sidebar-title"></div>
+      </div>
+      <div class="slide-nav-list" id="slide-nav-list"></div>
+    </div>
+
+    <!-- Main content -->
+    <div class="slide-main">
+      <div class="slide-content-area" id="slide-content-area">
+        <h2 id="slide-title"></h2>
+        <div id="slide-body"></div>
+      </div>
+      <div class="slide-nav-bar">
+        <button class="slide-nav-btn" id="btn-prev" onclick="prevSlide()">
+          ← <span data-i18n="slide.prev">Précédent</span>
+        </button>
+        <span class="slide-progress" id="slide-progress">1 / 1</span>
+        <button class="slide-nav-btn" id="btn-next" onclick="nextSlide()">
+          <span data-i18n="slide.next">Suivant</span> →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <div class="logo-mark small">RD</div>
+      <span>Resin by Dounia</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/resinbydounia/" target="_blank" data-i18n="contact.instagram">Instagram</a>
+      <a href="#" target="_blank" data-i18n="contact.tiktok">TikTok</a>
+      <a href="#" target="_blank" data-i18n="contact.whatsapp">WhatsApp</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer.rights">© 2026 Resin by Dounia — Casablanca, Maroc</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/formation.js"></script>
+</body>
+</html>

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Resin by Dounia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blush: #f2ddd5; --gold: #c9a96e; --gold-dark: #a8884a;
+      --dark: #2c1810; --text: #3d2b1f; --text-light: #8a6e63;
+      --bg: #fdf8f5; --white: #fff; --border: #e8d5cc;
+      --green: #4caf50; --red: #f44336; --radius: 10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Lato', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Layout */
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar {
+      width: 220px; flex-shrink: 0; background: var(--dark); color: white;
+      display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh;
+    }
+    .sidebar-brand {
+      padding: 1.5rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .brand-mark {
+      width: 36px; height: 36px; border-radius: 50%; background: var(--blush);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--dark); font-weight: 600;
+    }
+    .brand-name { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; letter-spacing: 0.08em; }
+    .sidebar-nav { padding: 1rem 0; flex: 1; }
+    .nav-item {
+      display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.25rem;
+      cursor: pointer; transition: all 0.2s; font-size: 0.88rem; border-left: 3px solid transparent;
+    }
+    .nav-item:hover { background: rgba(255,255,255,0.08); }
+    .nav-item.active { background: rgba(201,169,110,0.15); border-left-color: var(--gold); color: var(--gold); }
+    .nav-icon { font-size: 1rem; min-width: 20px; }
+    .sidebar-footer { padding: 1rem 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); }
+    .sidebar-footer a { font-size: 0.8rem; color: rgba(255,255,255,0.5); display: block; margin-bottom: 0.4rem; }
+    .sidebar-footer a:hover { color: white; }
+
+    .main { flex: 1; display: flex; flex-direction: column; }
+    .topbar {
+      background: white; border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 10;
+    }
+    .topbar h1 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: var(--dark); }
+    .topbar-actions { display: flex; gap: 0.75rem; }
+    .content { padding: 2rem; flex: 1; }
+
+    /* Tabs */
+    .tab { display: none; }
+    .tab.active { display: block; }
+
+    /* Cards */
+    .card { background: white; border-radius: var(--radius); box-shadow: 0 2px 12px rgba(44,24,16,0.06); margin-bottom: 1.5rem; }
+    .card-header {
+      padding: 1rem 1.5rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: var(--dark); }
+    .card-body { padding: 1.5rem; }
+
+    /* Buttons */
+    .btn { padding: 0.5rem 1.1rem; border-radius: 6px; border: none; cursor: pointer; font-family: 'Lato', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em; transition: all 0.2s; }
+    .btn-primary { background: var(--dark); color: white; }
+    .btn-primary:hover { background: #4a2218; }
+    .btn-gold { background: var(--gold); color: white; }
+    .btn-gold:hover { background: var(--gold-dark); }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-outline:hover { background: var(--blush); }
+    .btn-danger { background: transparent; color: var(--red); border: 1px solid var(--red); }
+    .btn-danger:hover { background: var(--red); color: white; }
+    .btn-sm { padding: 0.3rem 0.75rem; font-size: 0.78rem; }
+
+    /* Form */
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-full { grid-column: 1 / -1; }
+    .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+    .form-group label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); }
+    .form-group input, .form-group select, .form-group textarea {
+      padding: 0.55rem 0.85rem; border: 1.5px solid var(--border); border-radius: 6px;
+      font-family: 'Lato', sans-serif; font-size: 0.88rem; color: var(--text);
+      background: var(--bg); transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--gold);
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+
+    /* Table */
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th { text-align: left; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); padding: 0.6rem 1rem; background: var(--bg); border-bottom: 1px solid var(--border); }
+    tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: #fdf4f0; }
+    .thumb { width: 48px; height: 48px; border-radius: 6px; object-fit: cover; background: var(--blush); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; }
+    .badge { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 50px; font-size: 0.72rem; font-weight: 700; background: var(--blush); color: var(--gold-dark); }
+
+    /* Image upload preview */
+    .img-preview-wrap { margin-top: 0.5rem; }
+    .img-preview { width: 80px; height: 80px; border-radius: 6px; object-fit: cover; display: none; border: 1px solid var(--border); }
+    .img-preview.show { display: block; }
+
+    /* Image gallery */
+    .img-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.75rem; }
+    .img-gallery-item { position: relative; }
+    .img-gallery-item img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; border: 1px solid var(--border); }
+    .img-gallery-item .img-delete {
+      position: absolute; top: 4px; right: 4px; background: rgba(244,67,54,0.85); color: white;
+      border: none; border-radius: 50%; width: 20px; height: 20px; cursor: pointer; font-size: 0.7rem;
+      display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s;
+    }
+    .img-gallery-item:hover .img-delete { opacity: 1; }
+    .img-name { font-size: 0.68rem; color: var(--text-light); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-top: 0.2rem; }
+
+    /* Toast */
+    .toast {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; background: var(--dark); color: white;
+      padding: 0.75rem 1.5rem; border-radius: 8px; font-size: 0.85rem; z-index: 999;
+      transform: translateY(80px); opacity: 0; transition: all 0.3s;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast.success { background: var(--green); }
+    .toast.error { background: var(--red); }
+
+    /* Formation JSON editor */
+    .json-editor { font-family: monospace; font-size: 0.82rem; background: #1e1e1e; color: #d4d4d4; border: none; border-radius: 6px; }
+
+    /* Modal */
+    .modal-bg { position: fixed; inset: 0; background: rgba(44,24,16,0.45); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 1rem; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+    .modal-bg.open { opacity: 1; pointer-events: all; }
+    .modal-box { background: white; border-radius: 12px; padding: 2rem; max-width: 640px; width: 100%; max-height: 90vh; overflow-y: auto; transform: scale(0.95); transition: transform 0.25s; }
+    .modal-bg.open .modal-box { transform: scale(1); }
+    .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: var(--dark); margin-bottom: 1.25rem; }
+    .modal-footer { display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">RD</div>
+      <span class="brand-name">Admin</span>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-item active" onclick="showTab('products')">
+        <span class="nav-icon">🛍️</span> Produits
+      </div>
+      <div class="nav-item" onclick="showTab('formations')">
+        <span class="nav-icon">📚</span> Formations
+      </div>
+      <div class="nav-item" onclick="showTab('categories')">
+        <span class="nav-icon">🗂️</span> Catégories
+      </div>
+      <div class="nav-item" onclick="showTab('images')">
+        <span class="nav-icon">🖼️</span> Images
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="../index.html" target="_blank">↗ Voir le site</a>
+      <a href="../catalogue.html" target="_blank">↗ Voir le catalogue</a>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="topbar">
+      <h1 id="topbar-title">Gestion des Produits</h1>
+      <div class="topbar-actions">
+        <button class="btn btn-primary" id="topbar-add-btn" onclick="openAddProduct()">+ Ajouter un produit</button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- ===== PRODUCTS TAB ===== -->
+      <div class="tab active" id="tab-products">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Tous les produits</span>
+            <span id="product-count" style="font-size:0.82rem;color:var(--text-light)"></span>
+          </div>
+          <div class="card-body" style="padding:0">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Photo</th>
+                    <th>Nom</th>
+                    <th>Catégorie</th>
+                    <th>Prix (MAD)</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="products-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== FORMATIONS TAB ===== -->
+      <div class="tab" id="tab-formations">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Toutes les formations</span>
+            <span id="formation-count" style="font-size:0.82rem;color:var(--text-light)"></span>
+          </div>
+          <div class="card-body" style="padding:0">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Titre</th>
+                    <th>Description</th>
+                    <th>Slides</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="formations-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== CATEGORIES TAB ===== -->
+      <div class="tab" id="tab-categories">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Images de fond des catégories</span>
+            <span style="font-size:0.82rem;color:var(--text-light)">Cliquez sur une carte pour changer sa photo</span>
+          </div>
+          <div class="card-body">
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem" id="categories-grid"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== IMAGES TAB ===== -->
+      <div class="tab" id="tab-images">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Bibliothèque d'images</span>
+            <label class="btn btn-gold" style="cursor:pointer">
+              + Uploader des images
+              <input type="file" accept="image/*" multiple style="display:none" onchange="uploadImages(this)">
+            </label>
+          </div>
+          <div class="card-body">
+            <div class="img-gallery" id="img-gallery">
+              <p style="color:var(--text-light);grid-column:1/-1">Chargement…</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRODUCT MODAL ===== -->
+<div class="modal-bg" id="product-modal">
+  <div class="modal-box">
+    <div class="modal-title" id="product-modal-title">Ajouter un produit</div>
+    <form id="product-form" onsubmit="saveProduct(event)">
+      <input type="hidden" id="product-id">
+      <div class="form-grid">
+        <div class="form-group form-full">
+          <label>Nom du produit *</label>
+          <input type="text" id="p-name" required placeholder="Ex : Pack Fiançailles Rose Gold">
+        </div>
+        <div class="form-group">
+          <label>Catégorie *</label>
+          <select id="p-category" required>
+            <option value="pack_fiancailles">Packs Fiançailles</option>
+            <option value="conservation_fleurs">Conservation des Fleurs</option>
+            <option value="accessoires">Accessoires & Sujets</option>
+            <option value="deco_murale">Décorations Murales</option>
+            <option value="art_table">Art de Table</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Prix (MAD)</label>
+          <input type="number" id="p-price" placeholder="Ex : 350" min="0">
+        </div>
+        <div class="form-group form-full">
+          <label>Description courte</label>
+          <textarea id="p-desc" placeholder="Description visible sur la carte produit…"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Emoji / Icône (fallback sans photo)</label>
+          <input type="text" id="p-icon" placeholder="💍" maxlength="4">
+        </div>
+        <div class="form-group">
+          <label>Photo produit</label>
+          <input type="file" id="p-image" accept="image/*" onchange="previewImg(this)">
+          <div class="img-preview-wrap">
+            <img class="img-preview" id="p-img-preview" src="" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" onclick="closeProductModal()">Annuler</button>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </div>
+    </form>
+    <!-- Gallery management — shown only when editing -->
+    <div id="product-gallery-section" style="display:none;margin-top:1.5rem;border-top:1px solid var(--border);padding-top:1.25rem">
+      <div style="font-weight:700;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-light);margin-bottom:0.75rem">Galerie de photos</div>
+      <div id="product-gallery-grid" class="img-gallery" style="margin-bottom:1rem">
+        <p style="color:var(--text-light);font-size:0.85rem">Aucune photo dans la galerie.</p>
+      </div>
+      <label class="btn btn-outline btn-sm" style="cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem">
+        + Ajouter des photos
+        <input type="file" accept="image/*" multiple style="display:none" onchange="addProductImages(this)">
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FORMATION MODAL ===== -->
+<div class="modal-bg" id="formation-modal">
+  <div class="modal-box" style="max-width:700px">
+    <div class="modal-title" id="formation-modal-title">Ajouter une formation</div>
+    <form id="formation-form" onsubmit="saveFormation(event)">
+      <input type="hidden" id="formation-id">
+      <div class="form-grid">
+        <div class="form-group form-full">
+          <label>Titre *</label>
+          <input type="text" id="f-title" required placeholder="Ex : Créer un plateau en résine">
+        </div>
+        <div class="form-group form-full">
+          <label>Description courte</label>
+          <input type="text" id="f-desc" placeholder="Ex : Tutoriel complet pour débutants">
+        </div>
+        <div class="form-group">
+          <label>Tags (séparés par des virgules)</label>
+          <input type="text" id="f-tags" placeholder="débutant, plateau, tutoriel">
+        </div>
+        <div class="form-group">
+          <label>Langue</label>
+          <select id="f-lang">
+            <option value="fr">Français</option>
+            <option value="ar">Arabe</option>
+          </select>
+        </div>
+        <div class="form-group form-full">
+          <label>Slides (JSON) — voir <a href="https://github.com/amnayelamri/resin-by-dounia" target="_blank" style="color:var(--gold)">le guide</a></label>
+          <textarea class="json-editor" id="f-slides" style="min-height:200px" placeholder='[{"id":"s1","title":"Introduction","type":"markdown","content":"# Titre\n\nContenu..."}]'></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" onclick="closeFormationModal()">Annuler</button>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+/* ===== State ===== */
+let products = [];
+let formations = [];
+let currentProductId = null;
+let currentFormationId = null;
+
+/* ===== Tabs ===== */
+function showTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.currentTarget.classList.add('active');
+
+  const titles = { products: 'Gestion des Produits', formations: 'Gestion des Formations', categories: 'Images des Catégories', images: 'Bibliothèque d\'Images' };
+  const addBtns = {
+    products:   { label: '+ Ajouter un produit',   fn: 'openAddProduct()' },
+    formations: { label: '+ Ajouter une formation', fn: 'openAddFormation()' },
+    categories: { label: '', fn: '' },
+    images:     { label: '', fn: '' }
+  };
+  document.getElementById('topbar-title').textContent = titles[name];
+  const btn = document.getElementById('topbar-add-btn');
+  if (addBtns[name].label) {
+    btn.style.display = '';
+    btn.textContent = addBtns[name].label;
+    btn.setAttribute('onclick', addBtns[name].fn);
+  } else {
+    btn.style.display = 'none';
+  }
+
+  if (name === 'images') loadImages();
+  if (name === 'categories') loadCategories();
+}
+
+/* ===== Toast ===== */
+function toast(msg, type = '') {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.className = 'toast show ' + type;
+  setTimeout(() => el.className = 'toast', 2800);
+}
+
+/* ===== PRODUCTS ===== */
+async function loadProducts() {
+  const res = await fetch('/api/products');
+  products = await res.json();
+  renderProducts();
+}
+
+const CATS = {
+  pack_fiancailles:   'Packs Fiançailles',
+  conservation_fleurs:'Conservation Fleurs',
+  accessoires:        'Accessoires',
+  deco_murale:        'Déco Murale',
+  art_table:          'Art de Table'
+};
+
+function renderProducts() {
+  document.getElementById('product-count').textContent = products.length + ' produit(s)';
+  const tbody = document.getElementById('products-tbody');
+  if (!products.length) {
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:2rem;color:var(--text-light)">Aucun produit. Ajoutez-en un !</td></tr>';
+    return;
+  }
+  tbody.innerHTML = products.map(p => `
+    <tr>
+      <td>
+        <div class="thumb">
+          ${p.image ? `<img src="/images/${p.image}" alt="${p.name}">` : p.icon || '✨'}
+        </div>
+      </td>
+      <td><strong>${p.name}</strong></td>
+      <td><span class="badge">${CATS[p.category] || p.category}</span></td>
+      <td>${p.price ? p.price + ' MAD' : '—'}</td>
+      <td style="display:flex;gap:0.5rem;align-items:center">
+        <button class="btn btn-outline btn-sm" onclick="openEditProduct('${p.id}')">✏️ Modifier</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteProduct('${p.id}')">🗑️ Supprimer</button>
+      </td>
+    </tr>`).join('');
+}
+
+function openAddProduct() {
+  currentProductId = null;
+  document.getElementById('product-modal-title').textContent = 'Ajouter un produit';
+  document.getElementById('product-form').reset();
+  document.getElementById('product-id').value = '';
+  document.getElementById('p-img-preview').classList.remove('show');
+  document.getElementById('product-gallery-section').style.display = 'none';
+  document.getElementById('product-modal').classList.add('open');
+}
+
+function openEditProduct(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  currentProductId = id;
+  document.getElementById('product-modal-title').textContent = 'Modifier le produit';
+  document.getElementById('product-id').value = id;
+  document.getElementById('p-name').value = p.name;
+  document.getElementById('p-category').value = p.category;
+  document.getElementById('p-price').value = p.price || '';
+  document.getElementById('p-desc').value = p.description || '';
+  document.getElementById('p-icon').value = p.icon || '';
+  const preview = document.getElementById('p-img-preview');
+  if (p.image) { preview.src = '/images/' + p.image; preview.classList.add('show'); }
+  else preview.classList.remove('show');
+  renderProductGallery(p);
+  document.getElementById('product-gallery-section').style.display = '';
+  document.getElementById('product-modal').classList.add('open');
+}
+
+function renderProductGallery(p) {
+  const grid = document.getElementById('product-gallery-grid');
+  const imgs = p.images && p.images.length ? p.images : (p.image ? [p.image] : []);
+  if (!imgs.length) {
+    grid.innerHTML = '<p style="color:var(--text-light);font-size:0.85rem">Aucune photo dans la galerie.</p>';
+    return;
+  }
+  grid.innerHTML = imgs.map(f => `
+    <div class="img-gallery-item">
+      <img src="/images/${f}" alt="${f}" loading="lazy">
+      <button class="img-delete" onclick="removeProductImage('${f}')">✕</button>
+      <div class="img-name">${f}</div>
+    </div>`).join('');
+}
+
+async function addProductImages(input) {
+  if (!currentProductId || !input.files.length) return;
+  const fd = new FormData();
+  for (const file of input.files) fd.append('images', file);
+  const res = await fetch('/api/products/' + currentProductId + '/images', { method: 'POST', body: fd });
+  if (res.ok) {
+    const updated = await res.json();
+    const idx = products.findIndex(p => p.id === currentProductId);
+    if (idx !== -1) products[idx] = updated;
+    renderProductGallery(updated);
+    renderProducts();
+    toast('Photo(s) ajoutée(s) ✓', 'success');
+  } else toast('Erreur upload', 'error');
+  input.value = '';
+}
+
+async function removeProductImage(filename) {
+  if (!currentProductId) return;
+  if (!confirm('Retirer cette photo de la galerie ?')) return;
+  const res = await fetch('/api/products/' + currentProductId + '/images/' + filename, { method: 'DELETE' });
+  if (res.ok) {
+    const updated = await res.json();
+    const idx = products.findIndex(p => p.id === currentProductId);
+    if (idx !== -1) products[idx] = updated;
+    renderProductGallery(updated);
+    renderProducts();
+    toast('Photo retirée', '');
+  } else toast('Erreur suppression', 'error');
+}
+
+function closeProductModal() {
+  document.getElementById('product-modal').classList.remove('open');
+}
+
+function previewImg(input) {
+  const preview = document.getElementById('p-img-preview');
+  if (input.files && input.files[0]) {
+    preview.src = URL.createObjectURL(input.files[0]);
+    preview.classList.add('show');
+  }
+}
+
+async function saveProduct(e) {
+  e.preventDefault();
+  const fd = new FormData();
+  fd.append('name',        document.getElementById('p-name').value);
+  fd.append('category',    document.getElementById('p-category').value);
+  fd.append('price',       document.getElementById('p-price').value);
+  fd.append('description', document.getElementById('p-desc').value);
+  fd.append('icon',        document.getElementById('p-icon').value);
+  const imgFile = document.getElementById('p-image').files[0];
+  if (imgFile) fd.append('image', imgFile);
+
+  const id  = document.getElementById('product-id').value;
+  const url = id ? '/api/products/' + id : '/api/products';
+  const method = id ? 'PUT' : 'POST';
+
+  const res = await fetch(url, { method, body: fd });
+  if (res.ok) {
+    await loadProducts();
+    closeProductModal();
+    toast(id ? 'Produit modifié ✓' : 'Produit ajouté ✓', 'success');
+  } else {
+    toast('Erreur lors de la sauvegarde', 'error');
+  }
+}
+
+async function deleteProduct(id) {
+  if (!confirm('Supprimer ce produit ?')) return;
+  await fetch('/api/products/' + id, { method: 'DELETE' });
+  await loadProducts();
+  toast('Produit supprimé', '');
+}
+
+/* ===== FORMATIONS ===== */
+async function loadFormations() {
+  const res = await fetch('/api/formations');
+  formations = await res.json();
+  renderFormations();
+}
+
+function renderFormations() {
+  document.getElementById('formation-count').textContent = formations.length + ' formation(s)';
+  const tbody = document.getElementById('formations-tbody');
+  if (!formations.length) {
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:2rem;color:var(--text-light)">Aucune formation.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = formations.map((f, i) => `
+    <tr>
+      <td style="color:var(--text-light);font-family:serif;font-size:1.1rem">${String(i+1).padStart(2,'0')}</td>
+      <td><strong>${f.title}</strong></td>
+      <td style="color:var(--text-light)">${f.description || '—'}</td>
+      <td><span class="badge">${(f.slides||[]).length} slides</span></td>
+      <td style="display:flex;gap:0.5rem">
+        <button class="btn btn-outline btn-sm" onclick="openEditFormation('${f.id}')">✏️ Modifier</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteFormation('${f.id}')">🗑️ Supprimer</button>
+      </td>
+    </tr>`).join('');
+}
+
+function openAddFormation() {
+  currentFormationId = null;
+  document.getElementById('formation-modal-title').textContent = 'Ajouter une formation';
+  document.getElementById('formation-form').reset();
+  document.getElementById('f-slides').value = JSON.stringify([
+    { "id": "s1", "title": "Introduction", "type": "markdown", "content": "# Titre\n\nContenu de la leçon..." }
+  ], null, 2);
+  document.getElementById('formation-modal').classList.add('open');
+}
+
+function openEditFormation(id) {
+  const f = formations.find(x => x.id === id);
+  if (!f) return;
+  currentFormationId = id;
+  document.getElementById('formation-modal-title').textContent = 'Modifier la formation';
+  document.getElementById('formation-id').value = id;
+  document.getElementById('f-title').value = f.title || '';
+  document.getElementById('f-desc').value = f.description || '';
+  document.getElementById('f-tags').value = (f.tags || []).join(', ');
+  document.getElementById('f-lang').value = f.lang || 'fr';
+  document.getElementById('f-slides').value = JSON.stringify(f.slides || [], null, 2);
+  document.getElementById('formation-modal').classList.add('open');
+}
+
+function closeFormationModal() {
+  document.getElementById('formation-modal').classList.remove('open');
+}
+
+async function saveFormation(e) {
+  e.preventDefault();
+  let slides;
+  try { slides = JSON.parse(document.getElementById('f-slides').value); }
+  catch { toast('JSON des slides invalide — vérifiez la syntaxe', 'error'); return; }
+
+  const body = {
+    title:       document.getElementById('f-title').value,
+    description: document.getElementById('f-desc').value,
+    tags:        document.getElementById('f-tags').value.split(',').map(t => t.trim()).filter(Boolean),
+    lang:        document.getElementById('f-lang').value,
+    slides
+  };
+
+  const id  = document.getElementById('formation-id').value || currentFormationId;
+  const url = id ? '/api/formations/' + id : '/api/formations';
+  const method = id ? 'PUT' : 'POST';
+
+  const res = await fetch(url, { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  if (res.ok) {
+    await loadFormations();
+    closeFormationModal();
+    toast(id ? 'Formation modifiée ✓' : 'Formation ajoutée ✓', 'success');
+  } else {
+    toast('Erreur lors de la sauvegarde', 'error');
+  }
+}
+
+async function deleteFormation(id) {
+  if (!confirm('Supprimer cette formation ?')) return;
+  await fetch('/api/formations/' + id, { method: 'DELETE' });
+  await loadFormations();
+  toast('Formation supprimée', '');
+}
+
+/* ===== IMAGES ===== */
+async function loadImages() {
+  const res = await fetch('/api/images');
+  const files = await res.json();
+  const gallery = document.getElementById('img-gallery');
+  if (!files.length) {
+    gallery.innerHTML = '<p style="color:var(--text-light);grid-column:1/-1">Aucune image. Uploadez-en !</p>';
+    return;
+  }
+  gallery.innerHTML = files.map(f => `
+    <div class="img-gallery-item">
+      <img src="/images/${f}" alt="${f}" loading="lazy">
+      <button class="img-delete" onclick="deleteImage('${f}')">✕</button>
+      <div class="img-name">${f}</div>
+    </div>`).join('');
+}
+
+async function uploadImages(input) {
+  for (const file of input.files) {
+    const fd = new FormData();
+    fd.append('image', file);
+    await fetch('/api/products', { method: 'POST', body: fd });
+  }
+  /* Upload standalone via a dedicated endpoint */
+  toast('Pour uploader des images sans produit, utilisez le formulaire produit.', '');
+  await loadImages();
+}
+
+async function deleteImage(filename) {
+  if (!confirm('Supprimer cette image ?')) return;
+  await fetch('/api/images/' + filename, { method: 'DELETE' });
+  await loadImages();
+  toast('Image supprimée', '');
+}
+
+/* Close modals on backdrop click */
+document.getElementById('product-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('product-modal')) closeProductModal();
+});
+document.getElementById('formation-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('formation-modal')) closeFormationModal();
+});
+
+/* ===== CATEGORIES ===== */
+const CAT_LABELS = {
+  pack_fiancailles:    'Packs Fiançailles',
+  conservation_fleurs: 'Conservation des Fleurs',
+  accessoires:         'Accessoires & Sujets',
+  deco_murale:         'Décorations Murales',
+  art_table:           'Art de Table'
+};
+
+let categories = [];
+
+async function loadCategories() {
+  const res = await fetch('/api/categories');
+  categories = await res.json();
+  renderCategories();
+}
+
+function renderCategories() {
+  const grid = document.getElementById('categories-grid');
+  grid.innerHTML = categories.map(c => {
+    const hasImg = !!c.image;
+    const bg = hasImg
+      ? `background-image:url('/images/${c.image}');background-size:cover;background-position:center`
+      : `background:var(--blush)`;
+    return `
+      <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);position:relative;aspect-ratio:4/3;${bg};cursor:pointer"
+           onclick="triggerCatUpload('${c.key}')">
+        <div style="position:absolute;inset:0;background:rgba(44,24,16,${hasImg ? '0.35' : '0'});border-radius:12px;transition:all 0.2s"
+             onmouseover="this.style.background='rgba(44,24,16,0.5)'" onmouseout="this.style.background='rgba(44,24,16,${hasImg ? '0.35' : '0'})'"></div>
+        <div style="position:relative;z-index:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1rem;text-align:center">
+          <div style="font-size:1.8rem;margin-bottom:0.4rem">${c.icon}</div>
+          <div style="font-size:0.82rem;font-weight:700;color:${hasImg ? 'white' : 'var(--text)'};text-shadow:${hasImg ? '0 1px 3px rgba(0,0,0,0.5)' : 'none'}">${CAT_LABELS[c.key] || c.key}</div>
+          <div style="margin-top:0.6rem;font-size:0.72rem;background:rgba(255,255,255,0.85);color:var(--dark);padding:3px 10px;border-radius:50px">
+            ${hasImg ? '✏️ Changer' : '+ Ajouter une photo'}
+          </div>
+        </div>
+        ${hasImg ? `<button onclick="event.stopPropagation();removeCatImage('${c.key}')" style="position:absolute;top:6px;right:6px;background:rgba(244,67,54,0.85);color:white;border:none;border-radius:50%;width:22px;height:22px;cursor:pointer;font-size:0.7rem;z-index:2">✕</button>` : ''}
+      </div>
+      <input type="file" id="cat-file-${c.key}" accept="image/*" style="display:none" onchange="uploadCatImage('${c.key}', this)">
+    `;
+  }).join('');
+}
+
+function triggerCatUpload(key) {
+  document.getElementById('cat-file-' + key).click();
+}
+
+async function uploadCatImage(key, input) {
+  if (!input.files[0]) return;
+  const fd = new FormData();
+  fd.append('image', input.files[0]);
+  const res = await fetch('/api/categories/' + key, { method: 'PUT', body: fd });
+  if (res.ok) { await loadCategories(); toast('Image mise à jour ✓', 'success'); }
+  else toast('Erreur upload', 'error');
+}
+
+async function removeCatImage(key) {
+  if (!confirm('Supprimer l\'image de cette catégorie ?')) return;
+  const fd = new FormData();
+  fd.append('image', '');
+  await fetch('/api/categories/' + key, { method: 'PUT', body: fd });
+  await loadCategories();
+  toast('Image supprimée', '');
+}
+
+/* ===== Init ===== */
+loadProducts();
+loadFormations();
+loadCategories();
+</script>
+</body>
+</html>

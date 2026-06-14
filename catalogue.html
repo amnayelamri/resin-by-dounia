@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue — Resin by Dounia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500&family=Noto+Naskh+Arabic:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">RD</div>
+      <span class="logo-text">Resin by Dounia</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="catalogue.html" data-i18n="nav.catalogue">Catalogue</a>
+      <a href="formation.html" data-i18n="nav.formation">Formations</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-lang-fr" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" id="btn-lang-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="btn-lang-ar" onclick="setLang('ar')">عربي</button>
+        <button class="lang-btn" id="btn-lang-darija" onclick="setLang('darija')">دارجة</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" onclick="closeMenu()">✕</button>
+    <a href="index.html" onclick="closeMenu()" data-i18n="nav.home">Accueil</a>
+    <a href="catalogue.html" onclick="closeMenu()" data-i18n="nav.catalogue">Catalogue</a>
+    <a href="formation.html" onclick="closeMenu()" data-i18n="nav.formation">Formations</a>
+    <a href="contact.html" onclick="closeMenu()" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- Header -->
+  <div class="catalogue-header">
+    <h1 data-i18n="catalogue.title">Catalogue</h1>
+    <p data-i18n="catalogue.subtitle">Sélectionnez vos créations préférées</p>
+  </div>
+
+  <!-- Category Filter -->
+  <div class="category-filter" id="category-filter"></div>
+
+  <!-- Products -->
+  <div class="products-section">
+    <div class="products-grid" id="products-grid"></div>
+  </div>
+
+  <!-- Floating Order Bar -->
+  <div class="order-bar" id="order-bar">
+    <div class="order-bar-count" id="order-count">0</div>
+    <span class="order-bar-text" data-i18n="catalogue.order_btn">Commander</span>
+    <button class="order-bar-btn" onclick="openOrderModal()" data-i18n="catalogue.order_btn">Commander</button>
+  </div>
+
+  <!-- Order Modal -->
+  <div class="modal-overlay" id="order-modal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeOrderModal()">✕</button>
+      <h3 data-i18n="modal.title">Votre sélection</h3>
+      <p data-i18n="modal.desc">Copiez ce message et envoyez-le en DM sur Instagram :</p>
+      <div class="modal-message" id="modal-message"></div>
+      <div class="modal-actions">
+        <button class="btn-primary" onclick="copyMessage()" data-i18n="modal.copy">Copier le message</button>
+        <button class="btn-gold" onclick="openInstagram()" data-i18n="modal.open_ig">Ouvrir Instagram</button>
+      </div>
+      <p class="copy-feedback" id="copy-feedback" data-i18n="modal.copied">Message copié !</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <div class="logo-mark small">RD</div>
+      <span>Resin by Dounia</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/resinbydounia/" target="_blank" data-i18n="contact.instagram">Instagram</a>
+      <a href="#" target="_blank" data-i18n="contact.tiktok">TikTok</a>
+      <a href="#" target="_blank" data-i18n="contact.whatsapp">WhatsApp</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer.rights">© 2026 Resin by Dounia — Casablanca, Maroc</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/catalogue.js"></script>
+</body>
+</html>

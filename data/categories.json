@@ -1,0 +1,27 @@
+[
+  {
+    "key": "pack_fiancailles",
+    "icon": "💍",
+    "image": ""
+  },
+  {
+    "key": "conservation_fleurs",
+    "icon": "🌸",
+    "image": "1781416975214-hexagonex.png"
+  },
+  {
+    "key": "accessoires",
+    "icon": "✨",
+    "image": ""
+  },
+  {
+    "key": "deco_murale",
+    "icon": "🖼️",
+    "image": ""
+  },
+  {
+    "key": "art_table",
+    "icon": "🕯️",
+    "image": ""
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "p1",
+    "name": "Pack Fiançailles Blanc & Or",
+    "category": "pack_fiancailles",
+    "description": "Plateau personnalisé, verres gravés et bougeoirs en résine blanche et or.",
+    "price": 450,
+    "icon": "💍",
+    "image": "",
+    "images": []
+  },
+  {
+    "id": "p2",
+    "name": "Pack Fiançailles Rose Gold",
+    "category": "pack_fiancailles",
+    "description": "Ensemble complet avec plateau bordure dorée et prénom gravé.",
+    "price": 500,
+    "icon": "💍",
+    "image": "",
+    "images": []
+  },
+  {
+    "id": "p3",
+    "name": "Cadre Fleurs Préservées Blanc",
+    "category": "conservation_fleurs",
+    "description": "Vos fleurs préservées à jamais dans un cadre en résine cristalline.",
+    "price": 350,
+    "icon": "🌸",
+    "image": "",
+    "images": []
+  },
+  {
+    "id": "p4",
+    "name": "Bouquet Résine Bordeaux",
+    "category": "conservation_fleurs",
+    "description": "Conservation de bouquet dans un support en résine transparent.",
+    "price": 400,
+    "icon": "🌹",
+    "image": "1781418468727-image_2.jpg",
+    "images": [
+      "1781416963079-hexagone.avif",
+      "1781418449784-hexagone.avif",
+      "1781418461473-image_2.jpg"
+    ]
+  },
+  {
+    "id": "p5",
+    "name": "Sujet Dragée Personnalisé",
+    "category": "accessoires",
+    "description": "Sujets résine personnalisés avec prénoms et date pour vos dragées.",
+    "price": 80,
+    "icon": "✨",
+    "image": "",
+    "images": []
+  },
+  {
+    "id": "p6",
+    "name": "Porte-clés Résine",
+    "category": "accessoires",
+    "description": "Porte-clés personnalisés en résine avec fleurs séchées.",
+    "price": 60,
+    "icon": "🔑",
+    "image": "",
+    "images": []
+  },
+  {
+    "id": "p7",
+    "name": "Tableau Mural Abstrait",
+    "category": "deco_murale",
+    "description": "Œuvre murale en résine époxy, couleurs naturelles et dorures.",
+    "price": 700,
+    "icon": "🖼️",
+    "image": "",
+    "images": []
+  },
+  {
+    "id": "p8",
+    "name": "Panneau Floral",
+    "category": "deco_murale",
+    "description": "Décoration murale avec fleurs séchées incrustées dans la résine.",
+    "price": 550,
+    "icon": "🌿",
+    "image": "",
+    "images": []
+  },
+  {
+    "id": "p9",
+    "name": "Plateau de Table Or",
+    "category": "art_table",
+    "description": "Plateau résine blanc avec contours or, personnalisable.",
+    "price": 280,
+    "icon": "🕯️",
+    "image": "",
+    "images": []
+  },
+  {
+    "id": "p10",
+    "name": "Bougeoir Résine Marbré",
+    "category": "art_table",
+    "description": "Bougeoir effet marbre en résine, tons beige et or.",
+    "price": 120,
+    "icon": "🕯️",
+    "image": "",
+    "images": []
+  }
+]
