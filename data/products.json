@@ -383,10 +383,11 @@
     "description": "",
     "price": 25,
     "icon": "✨",
-    "image": "1781453518074-portecl1.jpeg",
+    "image": "1781467015866-WhatsApp-Image-2026-06-14-at-20.16.38-5.jpeg",
     "images": [
       "1781453220636-porte-cl.jpeg",
-      "1781453483943-portecl1.jpeg"
+      "1781453483943-portecl1.jpeg",
+      "1781467011160-WhatsApp-Image-2026-06-14-at-20.42.55.jpeg"
     ]
   },
   {
@@ -414,6 +415,20 @@
     "image": "1781466448179-WhatsApp-Image-2026-06-14-at-20.42.54.jpeg",
     "images": [
       "1781466448179-WhatsApp-Image-2026-06-14-at-20.42.54.jpeg"
+    ]
+  },
+  {
+    "id": "p1781466914348yh60",
+    "name": "Sujet",
+    "category": "accessoires",
+    "description": "Sujet avec votre personnalisation",
+    "price": 20,
+    "icon": "✨",
+    "image": "1781466978861-WhatsApp-Image-2026-06-14-at-20.16.38-5.jpeg",
+    "images": [
+      "1781466914346-WhatsApp-Image-2026-06-14-at-20.16.38-5.jpeg",
+      "1781466932777-WhatsApp-Image-2026-06-14-at-20.16.38-9.jpeg",
+      "1781466950856-WhatsApp-Image-2026-06-14-at-20.09.23-2.jpeg"
     ]
   }
 ]
