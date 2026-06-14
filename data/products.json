@@ -20,27 +20,20 @@
     "images": []
   },
   {
-    "id": "p3",
-    "name": "Cadre Fleurs Préservées Blanc",
-    "category": "conservation_fleurs",
-    "description": "Vos fleurs préservées à jamais dans un cadre en résine cristalline.",
-    "price": 350,
-    "icon": "🌸",
-    "image": "",
-    "images": []
-  },
-  {
     "id": "p4",
-    "name": "Bouquet Résine Bordeaux",
+    "name": "Mini Coeur",
     "category": "conservation_fleurs",
     "description": "Conservation de bouquet dans un support en résine transparent.",
-    "price": 400,
+    "price": 300,
     "icon": "🌹",
-    "image": "1781418468727-image_2.jpg",
+    "image": "1781445323257-cadrecoeurpt.jpeg",
     "images": [
-      "1781416963079-hexagone.avif",
-      "1781418449784-hexagone.avif",
-      "1781418461473-image_2.jpg"
+      "1781445323257-cadrecoeurpt.jpeg",
+      "1781445341027-cadre-coeur-pt-b.jpeg",
+      "1781445347190-cadre-coeur-pt-a.jpeg",
+      "1781445355932-cadre-coeur-Pt.jpeg",
+      "1781445369095-cadrecoeurpt1.jpeg",
+      "1781445387907-mini-cadre-coeur.jpg"
     ]
   },
   {
@@ -102,5 +95,67 @@
     "icon": "🕯️",
     "image": "",
     "images": []
+  },
+  {
+    "id": "p1781445795323ks81",
+    "name": "Moyen Coeur",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 450,
+    "icon": "✨",
+    "image": "1781445848358-cadre-coeur-My.jpeg",
+    "images": [
+      "1781445795313-cadre-coeur-My.jpeg",
+      "1781445820775-cadrecoeurmy2.jpeg"
+    ]
+  },
+  {
+    "id": "p1781446024285e09d",
+    "name": "Grand Coeur",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 600,
+    "icon": "✨",
+    "image": "1781446052487-cadrecoeurgr6.jpeg",
+    "images": [
+      "1781446024277-cadrecoeurgr6.jpeg",
+      "1781446046998-cadrecoeurgr7.jpeg"
+    ]
+  },
+  {
+    "id": "p1781446107424eg7s",
+    "name": "Mini Hexagone",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 450,
+    "icon": "✨",
+    "image": "1781446107422-hexagonept.jpg",
+    "images": [
+      "1781446107422-hexagonept.jpg"
+    ]
+  },
+  {
+    "id": "p17814462454057pez",
+    "name": "Hexagone Moyen",
+    "category": "pack_fiancailles",
+    "description": "",
+    "price": 650,
+    "icon": "✨",
+    "image": "1781446245394-hexagone11.jpeg",
+    "images": [
+      "1781446245394-hexagone11.jpeg"
+    ]
+  },
+  {
+    "id": "p1781446298462npyv",
+    "name": "Grand Hexagone",
+    "category": "conservation_fleurs",
+    "description": "",
+    "price": 1000,
+    "icon": "✨",
+    "image": "1781446298450-hexagonegr2.jpeg",
+    "images": [
+      "1781446298450-hexagonegr2.jpeg"
+    ]
   }
 ]
