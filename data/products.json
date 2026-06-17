@@ -1,15 +1,16 @@
 [
   {
     "id": "p1",
-    "name": "Pack Fiançailles Blanc & Or",
+    "name": "Pack Fiançailles Argenté & Doré",
     "category": "pack_fiancailles",
     "description": "Plateau personnalisé 33CM, 2 verres  et Mini trophée 13CM , 2 portes Bagues , BOL",
     "price": 660,
     "icon": "💍",
-    "image": "1781453749888-Pack-fianailles.jpg",
+    "image": "1781704842213-Pack-fianailles.jpg",
     "images": [
       "1781703648675-WhatsApp-Image-2026-06-14-at-22.40.50-4.jpeg",
-      "1781703668910-WhatsApp-Image-2026-06-14-at-22.40.50-1.jpeg"
+      "1781703668910-WhatsApp-Image-2026-06-14-at-22.40.50-1.jpeg",
+      "1781704755725-Pack-fianailles.jpg"
     ]
   },
   {
@@ -508,10 +509,9 @@
     "description": "",
     "price": 580,
     "icon": "✨",
-    "image": "1781703378108-WhatsApp-Image-2026-06-14-at-22.40.50.jpeg",
+    "image": "1781704795737-Pack-fianailles.jpg",
     "images": [
-      "1781703176075-WhatsApp-Image-2026-06-14-at-22.40.50.jpeg",
-      "1781703343029-WhatsApp-Image-2026-06-14-at-20.16.38.jpeg"
+      "1781703176075-WhatsApp-Image-2026-06-14-at-22.40.50.jpeg"
     ]
   }
 ]
