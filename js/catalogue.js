@@ -10,6 +10,7 @@ const CATEGORIES = [
   { key: 'accessoires' },
   { key: 'deco_murale' },
   { key: 'art_table' },
+  { key: 'baby' },
 ];
 
 async function loadProducts() {

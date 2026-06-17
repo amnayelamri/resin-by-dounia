@@ -7,7 +7,10 @@
     "price": 660,
     "icon": "💍",
     "image": "1781453749888-Pack-fianailles.jpg",
-    "images": []
+    "images": [
+      "1781703648675-WhatsApp-Image-2026-06-14-at-22.40.50-4.jpeg",
+      "1781703668910-WhatsApp-Image-2026-06-14-at-22.40.50-1.jpeg"
+    ]
   },
   {
     "id": "p2",
@@ -16,10 +19,14 @@
     "description": "Ensemble complet avec plateau 2verres,2 porte bagues, bol",
     "price": 400,
     "icon": "💍",
-    "image": "1781470916237-WhatsApp-Image-2026-06-14-at-20.16.38-5.jpeg",
+    "image": "1781703053121-WhatsApp-Image-2026-06-17-at-14.25.47-1.jpeg",
     "images": [
       "1781461734737-128695492d6b4afc88ca9e66115aaa41.jpg",
-      "1781470913822-WhatsApp-Image-2026-06-14-at-20.43.00.jpeg"
+      "1781470913822-WhatsApp-Image-2026-06-14-at-20.43.00.jpeg",
+      "1781703014063-52aaed85d3ab7b3a7ac0a5f1cced492b.jpg",
+      "1781703026260-WhatsApp-Image-2026-06-14-at-22.40.50-8.jpeg",
+      "1781703044123-WhatsApp-Image-2026-06-17-at-14.25.46-1.jpeg",
+      "1781703755037-WhatsApp-Image-2026-06-14-at-22.40.50-5.jpeg"
     ]
   },
   {
@@ -457,7 +464,8 @@
     "icon": "✨",
     "image": "1781472016790-WhatsApp-Image-2026-06-14-at-20.16.38-2.jpeg",
     "images": [
-      "1781472016790-WhatsApp-Image-2026-06-14-at-20.16.38-2.jpeg"
+      "1781472016790-WhatsApp-Image-2026-06-14-at-20.16.38-2.jpeg",
+      "1781703503849-WhatsApp-Image-2026-06-14-at-22.40.50-6.jpeg"
     ]
   },
   {
@@ -467,9 +475,43 @@
     "description": "",
     "price": 750,
     "icon": "✨",
-    "image": "1781472282842-WhatsApp-Image-2026-06-14-at-20.16.38-11.jpeg",
+    "image": "1781703291883-WhatsApp-Image-2026-06-14-at-22.40.50.jpeg",
     "images": [
-      "1781472282842-WhatsApp-Image-2026-06-14-at-20.16.38-11.jpeg"
+      "1781472282842-WhatsApp-Image-2026-06-14-at-20.16.38-11.jpeg",
+      "1781703224875-WhatsApp-Image-2026-06-14-at-22.40.50-3.jpeg",
+      "1781703240945-Pack-fianailles-1.jpg",
+      "1781703260181-WhatsApp-Image-2026-06-14-at-22.40.49.jpeg",
+      "1781703288987-WhatsApp-Image-2026-06-14-at-22.40.50-2.jpeg"
+    ]
+  },
+  {
+    "id": "p1781702924091g3p7",
+    "name": "Trophy Baby",
+    "category": "baby",
+    "description": "Dimension: 26cm Avec support",
+    "price": 250,
+    "icon": "✨",
+    "image": "1781702990044-WhatsApp-Image-2026-06-17-at-14.25.47-1.jpeg",
+    "images": [
+      "1781702924074-WhatsApp-Image-2026-06-17-at-14.25.47-1.jpeg",
+      "1781702944142-WhatsApp-Image-2026-06-17-at-14.25.46-3.jpeg",
+      "1781702952366-WhatsApp-Image-2026-06-17-at-14.25.47.jpeg",
+      "1781702961332-WhatsApp-Image-2026-06-17-at-14.25.46-2.jpeg",
+      "1781702976386-WhatsApp-Image-2026-06-17-at-14.25.46-5.jpeg",
+      "1781702988301-WhatsApp-Image-2026-06-17-at-14.25.46-4.jpeg"
+    ]
+  },
+  {
+    "id": "p17817031760810cvu",
+    "name": "Pack Fiançailles",
+    "category": "pack_fiancailles",
+    "description": "",
+    "price": 580,
+    "icon": "✨",
+    "image": "1781703378108-WhatsApp-Image-2026-06-14-at-22.40.50.jpeg",
+    "images": [
+      "1781703176075-WhatsApp-Image-2026-06-14-at-22.40.50.jpeg",
+      "1781703343029-WhatsApp-Image-2026-06-14-at-20.16.38.jpeg"
     ]
   }
 ]
