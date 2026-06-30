@@ -528,5 +528,30 @@
       "1782852804676-plateau-rond.jpeg",
       "1782852876578-WhatsApp-Image-2026-06-14-at-22.40.50-7.jpeg"
     ]
+  },
+  {
+    "id": "p1782853246301vmi8",
+    "name": "Trophy Bessma ",
+    "category": "pack_fiancailles",
+    "description": "Dimension : 30/20CM",
+    "price": 300,
+    "icon": "✨",
+    "image": "1782853246297-WhatsApp-Image-2026-06-14-at-20.16.38-6.jpeg",
+    "images": [
+      "1782853246297-WhatsApp-Image-2026-06-14-at-20.16.38-6.jpeg"
+    ]
+  },
+  {
+    "id": "p1782853610104cl9i",
+    "name": "Trophy Bessma Rond",
+    "category": "pack_fiancailles",
+    "description": "Dimension:26cm avec support et teint",
+    "price": 250,
+    "icon": "✨",
+    "image": "1782853629565-WhatsApp-Image-2026-06-17-at-14.56.53-1.jpeg",
+    "images": [
+      "1782853610097-WhatsApp-Image-2026-06-17-at-14.56.53-1.jpeg",
+      "1782853627505-WhatsApp-Image-2026-06-17-at-14.56.53-3.jpeg"
+    ]
   }
 ]
