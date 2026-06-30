@@ -71,7 +71,7 @@
     "description": "Porte-clés personnalisés en résine 5CM",
     "price": 25,
     "icon": "🔑",
-    "image": "1781462123814-portecl1.jpeg",
+    "image": "1782852974372-WhatsApp-Image-2026-06-14-at-20.16.38-7.jpeg",
     "images": []
   },
   {
@@ -240,8 +240,10 @@
     "description": "Dimension 20cm Profond 5cm",
     "price": 650,
     "icon": "✨",
-    "image": "1781450011437-cadrerond1.jpeg",
-    "images": []
+    "image": "1782852933104-plateau-rond.jpeg",
+    "images": [
+      "1782852929064-WhatsApp-Image-2026-06-17-at-14.25.46.jpeg"
+    ]
   },
   {
     "id": "p1781450194556x9f9",
@@ -512,6 +514,19 @@
     "image": "1781704795737-Pack-fianailles.jpg",
     "images": [
       "1781703176075-WhatsApp-Image-2026-06-14-at-22.40.50.jpeg"
+    ]
+  },
+  {
+    "id": "p17828528046837tsv",
+    "name": "Plateau Rond My",
+    "category": "conservation_fleurs",
+    "description": "Dimension: 26cm",
+    "price": 350,
+    "icon": "✨",
+    "image": "1782852897901-plateau-rond.jpeg",
+    "images": [
+      "1782852804676-plateau-rond.jpeg",
+      "1782852876578-WhatsApp-Image-2026-06-14-at-22.40.50-7.jpeg"
     ]
   }
 ]
