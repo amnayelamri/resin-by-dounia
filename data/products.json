@@ -81,11 +81,12 @@
     "description": "Dimension: 16cm",
     "price": 450,
     "icon": "✨",
-    "image": "1781470969297-WhatsApp-Image-2026-06-14-at-20.16.38-5.jpeg",
+    "image": "1788178388853-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
     "images": [
       "1781445795313-cadre-coeur-My.jpeg",
       "1781445820775-cadrecoeurmy2.jpeg",
-      "1781470941044-WhatsApp-Image-2026-06-14-at-20.42.58.jpeg"
+      "1781470941044-WhatsApp-Image-2026-06-14-at-20.42.58.jpeg",
+      "1788178385096-WhatsApp-Image-2026-08-31-at-13.03.49-2.jpeg"
     ]
   },
   {
@@ -95,14 +96,15 @@
     "description": "Dimension:22*5cm",
     "price": 600,
     "icon": "✨",
-    "image": "1781446052487-cadrecoeurgr6.jpeg",
+    "image": "1788178256010-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
     "images": [
       "1781446024277-cadrecoeurgr6.jpeg",
       "1781446046998-cadrecoeurgr7.jpeg",
       "1781471729095-WhatsApp-Image-2026-06-14-at-21.06.39.jpeg",
       "1781471744894-cadrecoeurgr1.jpeg",
       "1781471755556-cadrecoeurgr2.jpeg",
-      "1781471766274-cadrecoeurgr5.jpeg"
+      "1781471766274-cadrecoeurgr5.jpeg",
+      "1788178254171-WhatsApp-Image-2026-08-31-at-13.03.56-3.jpeg"
     ]
   },
   {
@@ -112,8 +114,10 @@
     "description": "Dimension: 16*5cm",
     "price": 450,
     "icon": "✨",
-    "image": "1781452035789-WhatsApp-Image-2026-06-14-at-16.42.21.jpeg",
-    "images": []
+    "image": "1788178280742-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
+    "images": [
+      "1788178268618-WhatsApp-Image-2026-08-31-at-13.03.51-1.jpeg"
+    ]
   },
   {
     "id": "p17814462454057pez",
@@ -140,9 +144,10 @@
     "description": "Dimension:30cm",
     "price": 1000,
     "icon": "✨",
-    "image": "1781446298450-hexagonegr2.jpeg",
+    "image": "1788178306865-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
     "images": [
-      "1781446298450-hexagonegr2.jpeg"
+      "1781446298450-hexagonegr2.jpeg",
+      "1788178302686-WhatsApp-Image-2026-08-31-at-13.03.49-3.jpeg"
     ]
   },
   {
@@ -150,9 +155,9 @@
     "name": "Mini Arch",
     "category": "conservation_fleurs",
     "description": "12*5*2",
-    "price": 200,
+    "price": 150,
     "icon": "✨",
-    "image": "1781449382046-cadrearc2.jpeg",
+    "image": "1788178342633-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
     "images": [
       "1781449202593-Large-Arch-Bookend-Epoxy-Resin-Silicone-Mould-9.webp"
     ]
@@ -176,12 +181,13 @@
     "description": "Dimension: 20*15*5cm",
     "price": 600,
     "icon": "✨",
-    "image": "1781471370488-WhatsApp-Image-2026-06-14-at-16.33.29.jpeg",
+    "image": "1788178365153-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
     "images": [
       "1781449353829-cadrearc2.jpeg",
       "1781471315218-cadrearc4.jpeg",
       "1781471324565-cadrearc5.jpeg",
-      "1781471342102-cadrearc1.jpeg"
+      "1781471342102-cadrearc1.jpeg",
+      "1788178363820-WhatsApp-Image-2026-08-31-at-13.03.51-2.jpeg"
     ]
   },
   {
@@ -266,9 +272,10 @@
     "description": "13cm avec support",
     "price": 100,
     "icon": "✨",
-    "image": "1781450291495-trophept2.jpeg",
+    "image": "1788178220437-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
     "images": [
-      "1781450291495-trophept2.jpeg"
+      "1781450291495-trophept2.jpeg",
+      "1788178218757-WhatsApp-Image-2026-08-31-at-13.03.56.jpeg"
     ]
   },
   {
@@ -278,12 +285,13 @@
     "description": "26CM AVEC SUPPORT",
     "price": 300,
     "icon": "✨",
-    "image": "1781453451824-trophemy3.jpeg",
+    "image": "1788178211596-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
     "images": [
       "1781450358648-trophemy3.jpeg",
       "1781453334997-trophemy4.jpeg",
       "1781453348126-WhatsApp-Image-2026-06-14-at-16.33.18.jpeg",
-      "1781453446216-WhatsApp-Image-2026-06-14-at-17.10.24.jpeg"
+      "1781453446216-WhatsApp-Image-2026-06-14-at-17.10.24.jpeg",
+      "1788178207878-WhatsApp-Image-2026-08-31-at-13.03.54.jpeg"
     ]
   },
   {
@@ -355,14 +363,20 @@
     "description": "Carré :25*25cm\r\nRectangle :20*25cm",
     "price": 450,
     "icon": "✨",
-    "image": "1781470852700-WhatsApp-Image-2026-06-14-at-20.16.38-5.jpeg",
+    "image": "1788178548387-WhatsApp-Image-2026-08-31-at-13.03.55.jpeg",
     "images": [
       "1781451682552-cadrebois1.jpeg",
       "1781451704664-cadreboisc.jpeg",
       "1781451721459-cadreboisd.jpeg",
       "1781451766130-cadre-bois-a.jpeg",
       "1781470809795-Flower-wedding_Wedding_Conservation-Flowers-Resin.jpg",
-      "1781470836426-WhatsApp-Image-2026-06-14-at-20.16.38-12.jpeg"
+      "1781470836426-WhatsApp-Image-2026-06-14-at-20.16.38-12.jpeg",
+      "1788178436040-WhatsApp-Image-2026-08-31-at-13.03.55-4.jpeg",
+      "1788178446042-WhatsApp-Image-2026-08-31-at-13.03.55-1.jpeg",
+      "1788178452891-WhatsApp-Image-2026-08-31-at-13.03.55-2.jpeg",
+      "1788178459618-WhatsApp-Image-2026-08-31-at-13.03.55-3.jpeg",
+      "1788178477154-WhatsApp-Image-2026-08-31-at-13.03.55.jpeg",
+      "1788178486964-WhatsApp-Image-2026-08-31-at-13.03.54-4.jpeg"
     ]
   },
   {
@@ -523,10 +537,11 @@
     "description": "Dimension: 26cm",
     "price": 350,
     "icon": "✨",
-    "image": "1782852897901-plateau-rond.jpeg",
+    "image": "1788178170382-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
     "images": [
       "1782852804676-plateau-rond.jpeg",
-      "1782852876578-WhatsApp-Image-2026-06-14-at-22.40.50-7.jpeg"
+      "1782852876578-WhatsApp-Image-2026-06-14-at-22.40.50-7.jpeg",
+      "1788178167936-WhatsApp-Image-2026-08-31-at-13.03.56-1.jpeg"
     ]
   },
   {
@@ -573,11 +588,30 @@
     "description": "Dimension: 15/3cm",
     "price": 350,
     "icon": "✨",
-    "image": "1784479359859-WhatsApp-Image-2026-06-14-at-16.14.45-2.jpeg",
+    "image": "1788178157294-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
     "images": [
       "1784479310537-WhatsApp-Image-2026-06-14-at-16.14.45-2.jpeg",
       "1784479340548-WhatsApp-Image-2026-06-14-at-16.14.45-1.jpeg",
-      "1784479358235-WhatsApp-Image-2026-06-14-at-16.14.45.jpeg"
+      "1784479358235-WhatsApp-Image-2026-06-14-at-16.14.45.jpeg",
+      "1788178130364-WhatsApp-Image-2026-08-31-at-13.03.54-2.jpeg",
+      "1788178139455-WhatsApp-Image-2026-08-31-at-13.03.54-3.jpeg",
+      "1788178149051-WhatsApp-Image-2026-08-31-at-13.03.54-1.jpeg"
+    ]
+  },
+  {
+    "id": "p1788178043836a94o",
+    "name": "Tableau Montre",
+    "category": "deco_murale",
+    "description": "Dimension 50cm",
+    "price": 1500,
+    "icon": "🌹",
+    "image": "1788178115735-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
+    "images": [
+      "1788178043825-WhatsApp-Image-2026-08-31-at-13.03.52.jpeg",
+      "1788178072529-WhatsApp-Image-2026-08-31-at-13.03.53-2.jpeg",
+      "1788178092375-WhatsApp-Image-2026-08-31-at-13.03.53-1.jpeg",
+      "1788178103353-WhatsApp-Image-2026-08-31-at-13.03.52-1.jpeg",
+      "1788178112556-WhatsApp-Image-2026-08-31-at-13.03.51-3.jpeg"
     ]
   }
 ]
