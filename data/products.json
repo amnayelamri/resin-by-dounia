@@ -613,5 +613,48 @@
       "1788178103353-WhatsApp-Image-2026-08-31-at-13.03.52-1.jpeg",
       "1788178112556-WhatsApp-Image-2026-08-31-at-13.03.51-3.jpeg"
     ]
+  },
+  {
+    "id": "p1788179823115v7oo",
+    "name": "SET PLATEAU",
+    "category": "art_table",
+    "description": "PLATEAU ET 6 SOUS-TASSES",
+    "price": 600,
+    "icon": "✨",
+    "image": "1788179847769-WhatsApp-Image-2026-08-31-at-13.29.29-2.jpeg",
+    "images": [
+      "1788179823106-WhatsApp-Image-2026-08-31-at-13.29.29-2.jpeg",
+      "1788179836147-WhatsApp-Image-2026-08-31-at-13.29.29-1.jpeg",
+      "1788179845141-WhatsApp-Image-2026-08-31-at-13.29.29.jpeg"
+    ]
+  },
+  {
+    "id": "p1788180018877xptf",
+    "name": "PLATEAU MARIAGE ARGENTE",
+    "category": "pack_fiancailles",
+    "description": "PLATEAU ET 2 SOUS-TASSES",
+    "price": 470,
+    "icon": "✨",
+    "image": "1788180058860-WhatsApp-Image-2026-08-31-at-13.30.43.jpeg",
+    "images": [
+      "1788180018874-WhatsApp-Image-2026-08-31-at-13.30.43.jpeg",
+      "1788180041371-WhatsApp-Image-2026-08-31-at-13.30.43-3.jpeg",
+      "1788180050683-WhatsApp-Image-2026-08-31-at-13.30.43-1.jpeg"
+    ]
+  },
+  {
+    "id": "p1788180213907kx2u",
+    "name": "PACK Henna",
+    "category": "pack_fiancailles",
+    "description": "PLATEAU/TROPHY/MINI TROPHY/2VEERES/SOUS-TASSE/2 PORTE BAGUE",
+    "price": 960,
+    "icon": "✨",
+    "image": "1788180494110-WhatsApp-Image-2026-08-31-at-13.30.59.jpeg",
+    "images": [
+      "1788180213904-WhatsApp-Image-2026-08-31-at-13.30.59.jpeg",
+      "1788180228129-WhatsApp-Image-2026-08-31-at-13.31.05.jpeg",
+      "1788180416111-WhatsApp-Image-2026-08-31-at-13.46.08-1.jpeg",
+      "1788180421438-WhatsApp-Image-2026-08-31-at-13.46.08.jpeg"
+    ]
   }
 ]
